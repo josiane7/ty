@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Money converter</title>
+    </head>
+    <body>
+        <h1>Money converter</h1>
+        <label>Enter dollars</label>
+        <input type="number" id="d"><p>
+        <label>Equivalent into Rwandan francs</label>
+        <input type="number" id="r"><p>
+        <button id="btnC">convert</button>&nbsp;
+        <input type="reset" value="reset">
+        <script>
+            const dollars=document.querySelector('#d');
+            const rwf=document.querySelector('#r');
+            const btn=document.querySelector('#btnC');
+            btn.onclick=()=>{
+                let D=number(dollars);
+                let R=D*1000;
+                rwf.value=`${R}`;
+            }
+        </script>  
+    </body>
+</html>
